@@ -1,0 +1,31 @@
+#######################################
+# Syntax Coloring Map for KTMS1201
+# LCD library
+# https://github.com/MCUdude/KTMS1201
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+KTMS1201	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+command	KEYWORD2
+customChar	KEYWORD2
+setCursor	KEYWORD2
+clear	KEYWORD2
+blink	KEYWORD2
+noBlink	KEYWORD2
+display	KEYWORD2
+noDisplay	KEYWORD2
+print	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
