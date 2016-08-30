@@ -18,7 +18,7 @@ byte SI = 4;
 byte CD = 5;
 byte RESET = 6;
 byte BUSY = 7;
-byte CS = 10;
+byte CS = 8;
 
 // Initialize the library with the interface pins
 KTMS1201 lcd(N_SCK, SI, CD, RESET, BUSY, CS);
