@@ -4,11 +4,21 @@ A high level Arduino library for the KTM-S1201 LCD module. Based on the [Tronixs
 <img src="http://i.imgur.com/SHNdIkf.jpg" width="450">
 
 ##Supported microcontrollers
-* Any Arduino compatible microcontroller with at least 5 IO pins! This library does not depend on hardware spesific code.
+Any Arduino compatible microcontroller with at least 5 IO pins! This library does not depend on hardware spesific code.
 
+##How to install
+This library can be installed in two ways, ether by using the manual mode or by using the Arduino library editor.
+
+###Manual installation
+Click on the "Clone or download" button in the upper right corner, and then "Download ZIP". Exctract the ZIP file, and move the extracted folder to the location "~/Documents/Arduino/libraries". Create the "libraries" folder if it doesn't exist. Open Arduino IDE, and a new library called "KTMS1201" will show up under the "examples" menu.
+
+###Library manager installation
+The library is also available through Arduino's library manager. <br/> 
+To open the library manager, in the IDE click on `Sketch` -> `Include Library` -> `Manage Libraries` <br/>
+Then search for <b>KTMS1201</b>.
 
 ##About the LCD
-The LCD is probably some OEM modules for old telephones. the LCD is driven by the [NEC uPD7225 LCD driver](http://www.lcd-module.de/eng/pdf/zubehoer/upd7225.pdf), and can be purchased [here](http://www.thepartsplace.k5nwa.com/index.php?route=product/product&product_id=58). The LCD got six interface pins; SCK, SI, CD, RESET, BUSY and CS. It's optional, but recommended to use the <b>BUSY</b> pin. This might be a trade off if you need the extra pin.
+The LCD is probably some OEM modules for old telephones. the LCD is driven by the [NEC uPD7225 LCD driver](http://www.lcd-module.de/eng/pdf/zubehoer/upd7225.pdf), and can be purchased [here](http://www.thepartsplace.k5nwa.com/index.php?route=product/product&product_id=58). The LCD has an operating voltage of 3.2v to 5.5v, and got six interface pins; SCK, SI, CD, RESET, BUSY and CS. It's optional, but recommended to use the <b>BUSY</b> pin. This might be a trade off if you need the extra pin. How can this pin be ommited and why isn't it recommended? Read more in the [constructor](#constructor) part.
 <br/> <br/>
 <img src="http://i.imgur.com/sBTxKxt.png" width="450">
 
