@@ -3,35 +3,35 @@ A high level Arduino library for the KTM-S1201 LCD module. Based on the [Tronixs
 <br/> <br/>
 <img src="http://i.imgur.com/SHNdIkf.jpg" width="450">
 
-##Supported microcontrollers
+## Supported microcontrollers
 Any Arduino compatible microcontroller with at least 5 IO pins! This library does not depend on hardware spesific code.
 
-##How to install
+## How to install
 This library can be installed in two ways, ether by using the manual mode or by using the Arduino library editor.
 
-###Manual installation
+### Manual installation
 Click on the "Clone or download" button in the upper right corner, and then "Download ZIP". Exctract the ZIP file, and move the extracted folder to the location "~/Documents/Arduino/libraries". Create the "libraries" folder if it doesn't exist. Open Arduino IDE, and a new library called "KTMS1201" will show up under the "examples" menu.
 
-###Library manager installation
+### Library manager installation
 The library is also available through Arduino's library manager. <br/> 
 To open the library manager, in the IDE click on `Sketch` -> `Include Library` -> `Manage Libraries` <br/>
 Then search for <b>KTMS1201</b>.
 
-##About the LCD
+## About the LCD
 The LCD is probably some OEM modules for old telephones. the LCD is driven by the [NEC uPD7225 LCD driver](http://www.lcd-module.de/eng/pdf/zubehoer/upd7225.pdf), and can be purchased [here](http://www.thepartsplace.k5nwa.com/index.php?route=product/product&product_id=58). The LCD has an operating voltage of 3.2v to 5.5v, and got six interface pins; SCK, SI, CD, RESET, BUSY and CS. It's optional, but recommended to use the <b>BUSY</b> pin. This might be a trade off if you need the extra pin. How can this pin be ommited and why isn't it recommended? Read more in the [constructor](#constructor) part.
 <br/> <br/>
 <img src="http://i.imgur.com/sBTxKxt.png" width="450">
 
-##Minimal setup
+## Minimal setup
 Here's a minimal setup that will get you up and running. Note that this setup includes the BUSY pin.
 <br/> <br/>
 <img src="http://i.imgur.com/01oAg7P.png" width="500">
 <br/> <br/>
 
 
-##Reference
+## Reference
 
-###Constructor
+### Constructor
 This library has two constructors, on with and one without the BUSY pin. Using the BUSY pin isn't mandatory, but it's recommended, since the LCD controller is handling the speed, rather than a fixed delay.
 ``` c++
 // Constructor with the BUSY pin
@@ -40,7 +40,7 @@ KTMS1201 lcd(N_SCK, SI, CD, RESET, BUSY, CS);
 KTMS1201 lcd(N_SCK, SI, CD, RESET, CS);
 ```
 
-###Methods
+### Methods
 These are the public methods for this library. Note that there exist multiple print() methods for different data types. You don't really need to care about this, just use the library like you would use `Serial.print()`!
 ``` c++
     void begin();
@@ -63,7 +63,7 @@ These are the public methods for this library. Note that there exist multiple pr
     void print(double, uint8_t decimals = 2);         // Print float number (default 2 decimals)
 ```
 
-###Custom characters
+### Custom characters
 This library supports custom characters, as long as it's printed induvidually. The picture below shows what hexadecimal numbers that represents each segment. Want to display more than one segment? simply add the segment values together!
 Enabling segment A, B and C is as simple as adding their values: <i>0x01 + 0x02 + 0x04 = 0x07</i>.
 This code will print a "/" at index 0:
